@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('../component/part/head.html',{
+  "title": "Main Page"
+})
+
+<body>
+  @@include('../component/part/header/header.html',{})
+  <main class="page-contain">
+    <div class="container">
+      <h1>Page Title</h1>
+      <div class="block-main">
+        <div class="block-main__row">
+          <div class="block-main__col">
+            @@include('../component/module/slider/slider.html',{})
+          </div>
+          <div class="block-main__col">
+            @@include('../component/module/product/product.html',{
+              "title": "Lorem ipsum dolor",
+              "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque nisi illum et praesentium blanditiis corporis harum quos quidem vel voluptatem corrupti, maxime incidunt nesciunt, quia aspernatur officia sapiente, eaque dicta.",
+              "rating": 4
+            })
+          </div>
+        </div>
+      </div>
+      <div class="block-list">
+        @@loop('../component/module/card/card.html', [
+          {
+            "img": "@img/temp/image1.png",
+            "title": "Lorem ipsum",
+            "text": "Lorem ipsum dolor sit amet consectetur, adipisicing elit."
+          },
+          {
+            "img": "@img/temp/image2.png",
+            "title": "Amet eius",
+            "text": "Amet eius vel dignissimos veritatis nesciunt inventore excepturi, suscipit autem vitae."
+          },
+          {
+            "img": "@img/temp/image3.png",
+            "title": "Minus sed beatae",
+            "text": "Minus sed beatae reprehenderit ad nesciunt"
+          }
+        ])
+      </div>
+
+    </div>
+  </main>
+  @@include('../component/part/footer/footer.html',{})
+  @@include('../component/part/script.html',{})
+</body>
+
+</html>

@@ -1,0 +1,9 @@
+footer.footer
+  .container
+    .footer__content
+      .footer__copyright &copy; all right reserved 2022
+      .footer__social
+        each icon in ['vimeo', 'twitter']
+          li
+            svg
+              use(xlink:href="@img/icons/sprite.svg#" + icon)

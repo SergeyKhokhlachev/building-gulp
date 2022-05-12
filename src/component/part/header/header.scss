@@ -1,0 +1,31 @@
+.header {
+  padding: 18px 0;
+  background-color: #eee;
+  box-shadow: 0 1px 10px 1px rgb(129 129 129 / 30%);
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 34px;
+  }
+  &__logo {
+    font-weight: 800;
+    font-size: 22px;
+    text-transform: uppercase;
+  }
+  &__user {
+    line-height: 1;
+    cursor: pointer;
+    svg {
+      width: 20px;
+      height: 20px;
+      transition: fill 0.2s ease-in-out;
+      fill: $text-color;
+    }
+    &:hover {
+      svg {
+        fill: $color-main;
+      }
+    }
+  }
+}

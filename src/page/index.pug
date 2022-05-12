@@ -1,0 +1,52 @@
+extends /layout/layout.pug
+
+prepend head
+  - const title = "Main Page"
+
+block content
+  main.page-contain
+    .container
+      h1 Page Title
+      .block-main
+        .block-main__row
+          .block-main__col
+            -
+              const slideList = [
+                "assets/img/temp/image1.png",
+                "assets/img/temp/image2.png",
+                "assets/img/temp/image3.png"
+              ]
+
+            include /component/module/slider/slider
+          .block-main__col
+            -
+              const product = {
+                title: "Lorem ipsum dolor",
+                text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque nisi illum et praesentium blanditiis corporis harum quos quidem vel voluptatem corrupti, maxime incidunt nesciunt, quia aspernatur officia sapiente, eaque dicta.",
+                rating: 4
+              }
+
+            include /component/module/product/product
+      .block-list
+        -
+          const cardList = [
+            {
+              img: "@img/temp/image1.png",
+              title: "Lorem ipsum",
+              text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit."
+            },
+            {
+              img: "@img/temp/image2.png",
+              title: "Amet eius",
+              text: "Amet eius vel dignissimos veritatis nesciunt inventore excepturi, suscipit autem vitae."
+            },
+            {
+              img: "@img/temp/image3.png",
+              title: "Minus sed beatae",
+              text: "Minus sed beatae reprehenderit ad nesciunt"
+            }
+          ]
+
+        each item in cardList
+          include /component/module/card/card
+
