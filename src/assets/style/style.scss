@@ -1,8 +1,8 @@
 /* ===== NOTE: normalize ===== */
-@import "~css-reset-and-normalize/scss/reset-and-normalize";
+@import "@node_modules/css-reset-and-normalize/scss/reset-and-normalize";
 
 /* ===== NOTE: libs style ===== */
-@import "~slick-carousel/slick/slick";
+@import "@node_modules/slick-carousel/slick/slick";
 
 /* ===== NOTE: variable ===== */
 @import "variable";

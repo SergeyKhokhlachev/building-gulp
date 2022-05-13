@@ -8,7 +8,7 @@ export default {
     files: './dist/assets/files/',
   },
   src: {
-    html: './src/page/**/*.pug', // *.pug if use pug
+    html: './src/page/**/*.pug', // *.pug or *.html
     js: './src/assets/js/app.js',
     style: './src/assets/style/style.scss',
     img: './src/assets/img/**/*.{jpg,jpeg,png,gif,webp}',
@@ -18,7 +18,7 @@ export default {
     files: './src/assets/files/**/*.*',
   },
   watch: {
-    html: './src/**/*.pug', // *.pug if use pug
+    html: './src/**/*.pug', // *.pug or *.html
     js: './src/**/*.js',
     style: './src/**/*.scss',
     img: './src/assets/img/**/*.{jpg,jpeg,png,gif,svg,gif,ico,webp}',

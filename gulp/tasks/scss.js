@@ -1,7 +1,7 @@
 /* global app */
 import dartSass from 'sass';
 import gulpSass from 'gulp-sass';
-import importerSass from 'node-sass-tilde-importer';
+import SassAlias from 'sass-alias';
 
 import cleanCSS from 'gulp-clean-css';
 import autoprefixer from 'gulp-autoprefixer';
@@ -15,7 +15,6 @@ const sass = gulpSass(dartSass);
 export default () => app.gulp.src(app.path.src.style, { sourcemaps: app.isDev })
   .pipe(app.plugins.plumber())
   .pipe(app.plugins.replace(/@img\//g, '../img/'))
-  .pipe(app.plugins.replace(/@component\//g, '../../component/'))
   .pipe(stylelint({
     reporters: [
       {
@@ -26,7 +25,10 @@ export default () => app.gulp.src(app.path.src.style, { sourcemaps: app.isDev })
   }))
   .pipe(sass({
     outputStyle: 'expanded',
-    importer: importerSass,
+    importer: new SassAlias({
+      '@node_modules': './node_modules',
+      '@component': './src/component',
+    }).getImporter(),
   }).on('error', sass.logError))
   .pipe(
     app.plugins.gulpIf(
