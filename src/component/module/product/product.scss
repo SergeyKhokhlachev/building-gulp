@@ -4,18 +4,6 @@
     font-size: 1.8rem;
   }
 
-  &__rating {
-    margin-bottom: 40px;
-
-    span {
-      color: $text-color-muted;
-
-      &.active {
-        color: $color-main;
-      }
-    }
-  }
-
   &__text {
     margin-bottom: 30px;
   }

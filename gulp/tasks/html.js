@@ -4,12 +4,14 @@ import webpHtml from 'gulp-webp-html-nosvg';
 // import fileinclude from 'gulp-file-include';
 // === if use pug ===
 import pug from 'gulp-pug';
+import pugLinter from 'gulp-pug-linter';
 
 export default () => app.gulp.src(app.path.src.html)
   .pipe(app.plugins.plumber())
   // === if use html ===
   // .pipe(fileinclude({}))
   // === if use pug ===
+  .pipe(pugLinter({ reporter: 'puglint-stylish' }))
   .pipe(pug({
     pretty: true,
     verbose: true,

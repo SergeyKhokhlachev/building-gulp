@@ -1,12 +1,12 @@
 .product
   .product__title #{product.title}
-  .product__rating
+  .rating
     - let n = 1
       while n < 5
         if (n < product.rating)
-          span.active ★
+          span.rating__ell.rating__ell--active ★
         else
-          span ★
+          span.rating__ell ★
         - n++
   .product__text #{product.text}
   button(class="btn btn--main" type="button") button
