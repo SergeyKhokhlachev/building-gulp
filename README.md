@@ -1,5 +1,12 @@
 # Building Gulp + Pug + Sass + Lint
 
+- [Структура файлов](./docs/FILE_STRUCTURE.md)
+- [Описание задач](./docs/TASK_DESCRIPTION.md)
+- [Работа со сборкой](./docs/BUILD_WORK.md)
+- [Правила написания стилей Sass](./docs/STYLE_RULES.md)
+
+---
+
 ## Project setup
 ```
 npm install
