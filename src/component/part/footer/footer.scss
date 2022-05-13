@@ -2,20 +2,25 @@
   min-height: 130px;
   padding: 50px 0;
   background-color: #263238;
+
   &__content {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
+
   &__copyright {
     color: $text-color-muted;
     font-size: 0.8rem;
   }
+
   &__social {
     display: flex;
+
     li {
       margin-left: 18px;
       cursor: pointer;
+
       svg {
         display: block;
         width: 22px;
@@ -23,6 +28,7 @@
         transition: opacity 0.2s ease-in-out;
         fill: #fff;
       }
+
       &:hover {
         svg {
           opacity: 0.6;

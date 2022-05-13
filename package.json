@@ -67,6 +67,7 @@
     "webpack-stream": "^7.0.0"
   },
   "dependencies": {
+    "css-reset-and-normalize": "^2.3.6",
     "jquery": "^3.6.0",
     "slick-carousel": "^1.8.1"
   }
